@@ -1,0 +1,136 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-content {
+  background-color: #282c34;
+  min-height: fit-content;
+  min-width: 50%;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+*{
+  box-sizing: border-box;
+}
+.AddBar{
+  max-width: 40%;
+  margin: 10px auto;
+}
+
+form {
+  display:flex;
+  border:2px solid #424242;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 50px;
+}
+form button{
+  border-radius: 10px;
+  border: 0;
+  background-color: #c2c2c2;
+  cursor: pointer;
+  min-width: 30px;
+  min-height: 30px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+form Input[type="text"]{
+  border: 0;  
+  padding-right: 8px;
+  width: 100%;
+  background : none;
+  border-color: transparent;
+  -webkit-text-fill-color: beige;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+form Input[type="text"]:focus{
+  border-color: #282c34;
+  border: 0px solid green; 
+  border-radius: 2px; 
+  outline:none; 
+}
+div.TodoItem{
+  max-width: 40%;
+  background-color: rgba(224, 224, 224, 0.151);
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  align-items:center;
+  justify-items: center;
+  margin: 10px auto;
+  padding: 8px;
+  opacity: 1;
+  -webkit-text-fill-color: #a7a7a7;
+
+  transition: opacity .2s linear;
+}
+div.TodoItem.done{
+  opacity: 0.3;
+  -webkit-text-fill-color: #a7a7a7;
+  text-decoration-color: #cccccca2;
+  text-decoration-thickness: 2px;
+}
+div.TodoItem-text{
+  flex-grow: 1;
+}
+div.TodoItem span{
+  position: relative;
+}
+div.TodoItem span::before{
+  content: '';
+  background-color: #c2c2c2;
+  flex-grow: 1;
+  height: 1px;
+  display:inline-flex;
+  position: absolute;
+  width: 0;
+  transition: width .2s linear;
+  top: 10px;
+}
+div.TodoItem.done span::before{
+  width: 100%;
+}
+div.TodoItem svg{
+  height: 25px;
+  margin: 1px;
+  margin-right: 10px;
+  fill: #a7a7a7;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
