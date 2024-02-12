@@ -1,7 +1,7 @@
 {
   "name": "learning_1",
   "version": "0.1.0",
-  "homepage": "https://willowshadow.github.io/learning_1",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
